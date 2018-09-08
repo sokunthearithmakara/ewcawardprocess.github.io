@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en">
+   <head>
+     <title>Participant Data Sheet (PDS)</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+     <link rel="stylesheet" href="jquery-ui.min.css" />
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,500" rel="stylesheet">
+     <link type="text/css" href="style.css" rel="stylesheet" />
+     <!-- EWC external stylesheet -->
+     <link type="text/css" href="#" rel="stylesheet" />
+     <script src="jquery-3.3.1.min.js"></script>
+     <script src="jquery-ui.min.js"></script>
+     <script src="form-validation.js"></script>
+     <!-- EWC external JavaScript-->
+     <script src="#"></script>
+   </head>
+   <body id="pds-validation">
+      <div class="container pds-validation">
+         <!--EWC Logo -->
+         <div class="py-3 col-12 d-block text-center clearfix">
+            <img alt="East West Center Logo" class="ewc-logo" src="https://www.eastwestcenter.org/sites/default/files/ewcsig-tag_rgbdisplay_trans.png">
+         </div>
+         <!-- Title section -->
+         <div class="py-4 text-center">
+            <h3>Participant Data Sheet</h3>
+         </div>
+         <!-- Form Starts here -->
+         <form id="pdsValidationForm" class="needs-validation" action="#" method="post" novalidate>
+            <!--Section 1: EWC Info -->
+            <div class="form-row alert alert-info" role="alert">
+               <div class="form-row col-md-9">
+                  <label for="EmailToken" class="form_labels font-weight-bold">Please enter your validation code to access the Participant Data Sheet:<span class="required_field">*</span></label>
+                  <div class="input-group mb-3">
+                     <input type="text" class="form-control form_email" required="required" name="programUserEmail" id="EmailToken" placeholder="" aria-label="Enter validation code here">
+                     <div class="input-group-append">
+                        <input class="btn btn-info font-weight-bold" type="submit" value="CONTINUE" formaction="https://cloud.eastwestcenter.org:8443/pdsform/pds-user-info?formType=long" />
+                     </div>
+                     <div class="invalid-feedback animated shake">
+                        Please enter a correct validation code provided by your EWC program staff.
+                     </div>
+                  </div>
+               </div>
+               <div class="form-row col-md-12"><span>If you have questions, please refer to the email sent to you from the EWC program.</span></div>
+            </div>
+         </form>
+      </div>
+      <script>
+         // Example starter JavaScript for disabling form submissions if there are invalid fields
+         (function() {
+           'use strict';
+           window.addEventListener('load', function() {
+             // Fetch all the forms we want to apply custom Bootstrap validation styles to
+             var forms = document.getElementsByClassName('needs-validation');
+             // Loop over them and prevent submission
+             var validation = Array.prototype.filter.call(forms, function(form) {
+               form.addEventListener('submit', function(event) {
+                 if (form.checkValidity() === false) {
+                   event.preventDefault();
+                   event.stopPropagation();
+                 }
+                 form.classList.add('was-validated');
+               }, false);
+             });
+           }, false);
+         })();
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+   </body>
+</html>
