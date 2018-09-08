@@ -28,4 +28,3 @@
 
     });
 */
-alert('Hello World');
