@@ -1,1 +1,5 @@
-    alert("Hello! I am an alert box!");
+$(document).ready(function() {
+  $(function() {
+     $('#businessSecondEmailType','#homeSecondEmailType').attr('disabled', true);
+  });
+});
