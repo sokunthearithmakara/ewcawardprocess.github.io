@@ -1,6 +1,5 @@
 $(document).ready(function() {
-  
-     $('#homeSecondEmailType').attr('disabled', true);
-
+  alert('It works!');
+  $('#homeSecondEmailType').attr('disabled', true);
 });
 
