@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $(function() {
-     $('#businessSecondEmailType','#homeSecondEmailType').attr('disabled', true);
+     $('#homeSecondEmailType').attr('disabled', true);
   });
 });
 
