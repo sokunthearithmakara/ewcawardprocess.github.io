@@ -41,4 +41,10 @@ $(document).ready(function() {
     $("input[type='text']").bind('keyup blur',function() { 
             $(this).val($(this).val().replace(/[^0-9A-Za-z!;"?_@<>=#$%&'()*+,-./\[\]\ ]/g,''))
         });
+    //Prevent input characters other than numbers, plus, minus, brackets and space in the tel inputs.
+    $("input[type='text']").bind('keyup blur',function() { 
+            $(this).val($(this).val().replace(/[^0-9()#/+-. ]/g,''))
+        });
+    //Remove tooltip for mobile phone field
+    $('[name="contactInfo.mobileTelephone"]').removeAttr("data-original-title");
 });
