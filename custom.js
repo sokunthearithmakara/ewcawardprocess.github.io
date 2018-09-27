@@ -22,6 +22,6 @@ $(document).ready(function() {
         }
     });
     $("input[type='text']").bind('keyup blur',function() { 
-            $(this).val($(this).val().replace(/[^0-9A-Za-z!"_@<>=#$%&'()*+,-./\[\]\ ]/g,''))
+            $(this).val($(this).val().replace(/[^0-9A-Za-z!"?_@<>=#$%&'()*+,-./\[\]\ ]/g,''))
         });
 });
