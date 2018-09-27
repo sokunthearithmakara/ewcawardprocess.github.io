@@ -13,7 +13,7 @@ $(document).ready(function() {
         } else {
             $("#homeSecondEmailType").attr('disabled', true).prop('required', false).prop('checked', false);
             $("#businessSecondEmailType").attr('disabled', true).prop('checked', false);
-            $("#homeSecondEmailType").closest('fieldset').removeClass("text-muted");
+            $("#homeSecondEmailType").closest('fieldset').removeAttr("class");
         }
     });
     $("[name='emergencyContactInfo.secondaryTelephone']").change(function() {
@@ -24,7 +24,7 @@ $(document).ready(function() {
         } else {
             $("#personal2").attr('disabled', true).prop('required', false).prop('checked', false);
             $("#business2").attr('disabled', true).prop('checked', false);
-            $("#personal2").closest('fieldset').removeClass("text-muted");
+            $("#personal2").closest('fieldset').removeAttr("class");
         }
     });
     $("input[type='text']").bind('keyup blur',function() { 
