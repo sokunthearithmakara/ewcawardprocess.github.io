@@ -1,3 +1,3 @@
 $(document).ready(function() {
-    $('#homeSecondEmailType','#businessSecondEmailType','#personal2','#business2').prop('disabled', true);
+$("input[type=radio]").attr('disabled', true);
 });
