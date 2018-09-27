@@ -6,12 +6,13 @@ $(document).ready(function() {
     $("#business2").attr('disabled', true);
     $("#homeSecondEmailType").closest('fieldset').addClass("text-muted");
     $("#personal2").closest('fieldset').addClass("text-muted");
+    requiredStar = '<span class="required_field">*</span>';
     $("[name='contactInfo.secondEmail']").change(function() {
         if ($(this).val() != "") {
             $("#homeSecondEmailType").attr('disabled', false).prop('required', true);
             $("#businessSecondEmailType").attr('disabled', false);
             $("#homeSecondEmailType").closest('fieldset').removeClass("text-muted");
-            var requiredStar = '<span class="required_field">*</span>';
+//            var requiredStar = '<span class="required_field">*</span>';
             $(requiredStar).appendTo($("#homeSecondEmailType").closest('fieldset').find("legend"));
 
         } else {
@@ -26,10 +27,14 @@ $(document).ready(function() {
             $("#personal2").attr('disabled', false).prop('required', true);
             $("#business2").attr('disabled', false);
             $("#personal2").closest('fieldset').removeClass("text-muted");
+            $(requiredStar).appendTo($("#personal2").closest('fieldset').find("legend"));
+
         } else {
             $("#personal2").attr('disabled', true).prop('required', false).prop('checked', false);
             $("#business2").attr('disabled', true).prop('checked', false);
             $("#personal2").closest('fieldset').addClass("text-muted");
+            $("#personal2").closest('fieldset').find("legend span").replaceWith("");
+
         }
     });
     // Limit characters to English characters, numbers, space, and special characters; otherwise, remove the restricted characters as entered.
