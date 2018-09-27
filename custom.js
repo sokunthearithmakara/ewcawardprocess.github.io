@@ -4,7 +4,7 @@ $(document).ready(function() {
     $("#personal2").attr('disabled', true);
     $("#business2").attr('disabled', true);
     $("[name='contactInfo.secondEmail']").change(function() {
-        if (this.val() != "") {
+        if ($(this).val() != "") {
             $("#homeSecondEmailType").attr('disabled', false).prop('required', true);
             $("#businessSecondEmailType").attr('disabled', false);
         } else {
