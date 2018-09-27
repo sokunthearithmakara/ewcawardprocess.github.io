@@ -21,7 +21,7 @@ $(document).ready(function() {
             $("#business2").attr('disabled', true).prop('checked', false);
         }
     });
-    $("[name='emergencyContactInfo.secondaryTelephone']").bind('keyup blur',function() { 
+    $("input[type='text']").bind('keyup blur',function() { 
             $(this).val($(this).val().replace(/[^0-9A-Za-z!"_@<>=#$%&'()*+,-./\[\]\ ]/g,''))
         });
 });
