@@ -39,7 +39,7 @@ $(document).ready(function() {
     });
     // Limit characters to English characters, numbers, space, and special characters; otherwise, remove the restricted characters as entered.
     $("input[type='text']").bind('keyup blur',function() { 
-            $(this).val($(this).val().replace(/[^0-9A-Za-z!;"?_@<>=#$%&'()*+,-./\[\]\ ]/g,''))
+            $(this).val($(this).val().replace(/[^0-9A-Za-z!;":?_@<>=#$%&'()*+,-./\[\]\ ]/g,''))
         });
     //Prevent input characters other than numbers, plus, minus, brackets and space in the tel inputs.
     $("input[type='tel']").bind('keyup blur',function() { 
