@@ -3,8 +3,8 @@ $(document).ready(function() {
     $("#businessSecondEmailType").attr('disabled', true);
     $("#personal2").attr('disabled', true);
     $("#business2").attr('disabled', true);
-    $("#homeSecondEmailType").closest('fieldset').addClass("text-muted");
-    $("#personal2").closest('fieldset').addClass("text-muted");
+    //$("#homeSecondEmailType").closest('fieldset').addClass("text-muted");
+    //$("#personal2").closest('fieldset').addClass("text-muted");
     $("[name='contactInfo.secondEmail']").change(function() {
         if ($(this).val() != "") {
             $("#homeSecondEmailType").attr('disabled', false).prop('required', true);
