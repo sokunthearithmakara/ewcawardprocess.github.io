@@ -46,5 +46,5 @@ $(document).ready(function() {
             $(this).val($(this).val().replace(/[^0-9()#/+-. ]/g,''))
         });
     //Remove tooltip for mobile phone field
-    $("[name='contactInfo.mobileTelephone']").removeAttr("data-original-title");
+    $("input[name='contactInfo.mobileTelephone']").removeAttr("data-original-title");
 });
