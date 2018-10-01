@@ -53,5 +53,5 @@ $(document).ready(function() {
             $(this).val($(this).val().replace(/[^0-9()#/+-. ]/g,''))
         });
     //Remove tooltip for mobile phone field
-    $(".mobileTelephone input").replaceWith('<input class="form_fields form-control " type="tel" required="required" id="contactInfo.mobileTelephone" value="" title="" name="contactInfo.mobileTelephone">');
+    //$(".mobileTelephone input").replaceWith('<input class="form_fields form-control " type="tel" required="required" id="contactInfo.mobileTelephone" value="" title="" name="contactInfo.mobileTelephone">');
 });
